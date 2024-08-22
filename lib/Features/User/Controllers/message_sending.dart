@@ -2,12 +2,14 @@ import 'dart:io';
 
 import 'package:background_sms/background_sms.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_sms/flutter_sms.dart';
+// import 'package:flutter_sms/flutter_sms.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:fetin_2024_3/Features/Emergency Contacts/emergency_contacts_controller.dart';
+import '../../Emergency Contacts/emergency_contacts_controller.dart';
 
 class messageController extends GetxController {
   static messageController get instance => Get.find();
@@ -78,16 +80,16 @@ class messageController extends GetxController {
 
     if (!hasPermission) {
       return Position(
-          latitude: 0.0,
-          longitude: 0.0,
+          latitude: 0,
+          longitude: 0,
           timestamp: DateTime.now(),
-          accuracy: 0.0,
-          altitudeAccuracy: 0,
-          altitude: 0.0,
-          heading: 0.0,
+          accuracy: 0,
+          altitude: 0,
+          altitudeAccuracy:0,
+          heading: 0,
           headingAccuracy:0,
-          speed: 0.0,
-          speedAccuracy: 0.0);
+          speed: 0,
+          speedAccuracy: 0);
     }
     await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high)
         .then((Position position) {
@@ -98,17 +100,17 @@ class messageController extends GetxController {
       debugPrint(e);
     });
     return Position(
-          latitude: 0.0,
-          longitude: 0.0,
+        latitude: 0,
+          longitude: 0,
           timestamp: DateTime.now(),
-          accuracy: 0.0,
-          altitudeAccuracy: 0,
-          altitude: 0.0,
-          heading: 0.0,
+          accuracy: 0,
+          altitude: 0,
+          altitudeAccuracy:0,
+          heading: 0,
           headingAccuracy:0,
-          speed: 0.0,
-          speedAccuracy: 0.0);
-    }
+          speed: 0,
+          speedAccuracy: 0);
+  }
 
   Future<void> _getAddressFromLatLng(Position position) async {
     await placemarkFromCoordinates(

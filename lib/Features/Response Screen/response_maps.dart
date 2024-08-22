@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-import 'package:fetin_2024_3/Features/Response Screen/emergencies_Screen.dart';
+import 'emergencies_screen.dart';
 
 class User {
   final String userName;

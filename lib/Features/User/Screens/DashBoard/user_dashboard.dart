@@ -4,7 +4,8 @@ import 'package:get/get.dart';
 import 'package:fetin_2024_3/Features/User/Controllers/message_sending.dart';
 import 'package:fetin_2024_3/Features/User/Screens/DashBoard/grid_dash.dart';
 
-import 'package:fetin_2024_3/Features/User/Controllers/session_controller.dart';
+import '../../Controllers/session_controller.dart';
+// import 'login_screen.dart';
 
 class UserDashboard extends StatefulWidget {
   const UserDashboard({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ class _UserDashboardState extends State<UserDashboard> {
       // ),
 
       appBar: AppBar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
         shape: const RoundedRectangleBorder(

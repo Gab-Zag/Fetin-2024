@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:fetin_2024_3/Features/User/Controllers/message_sending.dart';
+import '../../Controllers/message_sending.dart';
 
 class PoliceOptions extends StatefulWidget {
   const PoliceOptions({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class _PoliceOptionsState extends State<PoliceOptions> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
         shape: const RoundedRectangleBorder(
@@ -50,7 +50,7 @@ class _PoliceOptionsState extends State<PoliceOptions> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text(
-                          "Opções Policiais",
+                          "Police Options",
                           style: TextStyle(
                               fontSize: 28,
                               fontWeight: FontWeight.w700,
@@ -75,7 +75,7 @@ class _PoliceOptionsState extends State<PoliceOptions> {
                     Radius.circular(15.0),
                   ),
                 ),
-                tileColor: Colors.green.shade300,
+                tileColor: Colors.blue.shade300,
                 leading: const Icon(Icons.map),
                 title: const Text('Police Station Map Display'),
                 subtitle:
@@ -125,11 +125,11 @@ class _PoliceOptionsState extends State<PoliceOptions> {
                 onTap: () async {
                   if (await Permission.phone.request().isGranted) {
                     debugPrint("In making phone call");
-                    var url = Uri.parse("tel:190");
+                    var url = Uri.parse("tel:15");
                     await launchUrl(url);
-                    debugPrint("localização Permitida");
+                    debugPrint("Location Permission is granted");
                   } else {
-                    debugPrint("localização não permitida.");
+                    debugPrint("Location Permission is denied.");
                   }
                 },
               ),

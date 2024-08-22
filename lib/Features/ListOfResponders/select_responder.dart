@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:math';
-import 'package:fetin_2024_3/Features/Response Screen/emergencies_Screen.dart';
-import 'package:fetin_2024_3/Features/User/Screens/LivesStreaming/live_stream.dart';
+import '../Response Screen/emergencies_screen.dart';
+import '../User/Screens/LiveStreaming/live_stream.dart';
 
 class SelectResponder extends StatefulWidget {
   final userID;
@@ -40,7 +40,7 @@ class _SelectResponderState extends State<SelectResponder> {
     }
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
         shape: const RoundedRectangleBorder(
@@ -60,7 +60,7 @@ class _SelectResponderState extends State<SelectResponder> {
                     size: Size(36, 36),
                     child: ClipOval(
                       child: Material(
-                        color: Colors.lightGreenAccent,
+                        color: Colors.lightBlueAccent,
                         child: InkWell(
                           splashColor: Colors.white,
                           onTap: () {  Get.back();
@@ -155,7 +155,7 @@ class _SelectResponderState extends State<SelectResponder> {
                         var address = list[index]['address'];
                         var userId = list[index]['videoId'];
                       },
-                      tileColor: Colors.lightGreenAccent,
+                      tileColor: Colors.lightBlueAccent,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
                       ),
@@ -168,7 +168,7 @@ class _SelectResponderState extends State<SelectResponder> {
                             color: Colors.white),
                       ),
                       subtitle: Text(
-                        "Distância deste usuário : ${calculateDistance(widget.userLat, widget.userLong, double.parse(list[index]['lat']),double.parse(list[index]['long'])).toStringAsFixed(2)} km",
+                        "Distance from this user : ${calculateDistance(widget.userLat, widget.userLong, double.parse(list[index]['lat']),double.parse(list[index]['long'])).toStringAsFixed(2)} km",
                         // list[index]['long'],
                         // "Distance from this user : 0 km",
                         style: const TextStyle(

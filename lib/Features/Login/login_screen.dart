@@ -1,7 +1,9 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:fetin_2024_3/Common Widgets/form_footer.dart';
-import 'package:fetin_2024_3/Features/Login/login_form_widget.dart';
+import '../../../../Common Widgets/form_footer.dart';
+import 'login_form_widget.dart';
 
 class LoginScreen extends StatelessWidget  {
   const LoginScreen({Key? key}) : super(key: key);
@@ -12,7 +14,7 @@ class LoginScreen extends StatelessWidget  {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
 

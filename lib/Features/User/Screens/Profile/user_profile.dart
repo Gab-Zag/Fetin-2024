@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:fetin_2024_3/Features/User/Controllers/session_controller.dart';
 
-import 'package:fetin_2024_3/Features/Emergency Contacts/add_contacts.dart';
-import 'package:fetin_2024_3/Features/Emergency Contacts/emergency_contacts.dart';
-import 'package:fetin_2024_3/Features/Login/login_screen.dart';
+import '../../../Emergency Contacts/add_contacts.dart';
+import '../../../Emergency Contacts/emergency_contacts.dart';
+import '../../../Login/login_screen.dart';
 
 class UserProfile extends StatefulWidget {
   const UserProfile({Key? key}) : super(key: key);
@@ -30,11 +30,13 @@ class _UserProfileState extends State<UserProfile> {
               ElevatedButton(
 
                 style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.white, backgroundColor: Colors.red, minimumSize: Size(200, 50),
+                  minimumSize: Size(200, 50),
                   shape: RoundedRectangleBorder(
 
                     borderRadius: BorderRadius.circular(32.0),
                   ),
+                  //primary: Colors.red, // background
+                  //onPrimary: Colors.white,
                   // foreground
                 ),
                   onPressed: () {
@@ -50,11 +52,13 @@ class _UserProfileState extends State<UserProfile> {
               const SizedBox(height: 20,),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white, backgroundColor: Colors.green, minimumSize: Size(200, 50),
+                    minimumSize: Size(200, 50),
                     shape: RoundedRectangleBorder(
 
                       borderRadius: BorderRadius.circular(32.0),
                     ),
+                    //primary: Colors.green, // background
+                    //onPrimary: Colors.white,
                     // foreground
                   ),
                   onPressed: () {
@@ -64,11 +68,13 @@ class _UserProfileState extends State<UserProfile> {
               const SizedBox(height: 20,),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white, backgroundColor: Colors.green, minimumSize: Size(200, 50),
+                    minimumSize: Size(200, 50),
                     shape: RoundedRectangleBorder(
 
                       borderRadius: BorderRadius.circular(32.0),
                     ),
+                    //primary: Colors.blue, // background
+                    //onPrimary: Colors.white,
                     // foreground
                   ),
                   onPressed: () {

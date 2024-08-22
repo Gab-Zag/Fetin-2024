@@ -6,7 +6,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:fetin_2024_3/Features/User/Controllers/session_controller.dart';
 import '../../Controllers/message_sending.dart';
-import 'package:fetin_2024_3/Features/User/Screens/LivesStreaming/live_stream.dart';
+import 'live_stream.dart';
 
 class LiveStreamUser extends StatefulWidget {
   const LiveStreamUser({Key? key}) : super(key: key);
@@ -142,15 +142,12 @@ class _LiveStreamUserState extends State<LiveStreamUser> {
     if (liveId.isNotEmpty) {
       Get.to(
         () => LiveStreamingPage(
+          liveId: liveId,
+          isHost: isHost,
         ),
       );
     } else {
       Get.snackbar("Error", "Please enter a valid ID");
     }
   }
-}
-
-class LiveStreamingPage {
-  //liveId: liveId,
-  //isHost: isHost,
 }

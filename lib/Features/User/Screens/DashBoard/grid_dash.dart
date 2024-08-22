@@ -8,27 +8,27 @@ import 'package:fetin_2024_3/Features/User/Screens/PoliceOptions/police_options.
 
 class GridDashboard extends StatelessWidget {
   Items item1 = Items(
-      title: "Policia",
-      subtitle: "Emergencia necessidade de acionamento dos Policias ",
+      title: "Police",
+      subtitle: "Emergency Police ",
       event: "",
       img: "assets/logos/policeman.png");
 
   Items item2 = Items(
-    title: "Bombeiros",
-    subtitle: "Emergencia necessidade de acionamento dos Bombeiros ",
+    title: "Fire Brigade",
+    subtitle: "Emergency Fire Brigade",
     event: "",
     img: "assets/logos/fire-truck.png",
   );
 
   Items item3 = Items(
-    title: "SAMU",
-    subtitle: "Emergencia necessidade de acionamento do SAMU",
+    title: "Ambulance",
+    subtitle: "Emergency Ambulance",
     event: "",
     img: "assets/logos/ambulance.png",
   );
   Items item4 = Items(
-    title: "Hospitais",
-    subtitle: "Emergencia Hospitalares",
+    title: "Hospitals",
+    subtitle: "Emergency Hospitals",
     event: "",
     img: "assets/logos/hospital.png",
   );

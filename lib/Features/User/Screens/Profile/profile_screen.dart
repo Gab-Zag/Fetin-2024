@@ -1,9 +1,12 @@
+
+
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:fetin_2024_3/Features/User/Screens/Profile/profile_screen_form.dart';
-import 'package:fetin_2024_3/Features/Login/login_screen.dart';
-import 'package:fetin_2024_3/Features/User/Controllers/session_controller.dart';
+import '../../../Login/login_screen.dart';
+import '../../controllers/session_controller.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -18,7 +21,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     return Scaffold(
       floatingActionButton:FloatingActionButton(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         foregroundColor: Colors.white,
         shape: StadiumBorder(
             side: BorderSide(
@@ -36,7 +39,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
       extendBodyBehindAppBar: false,
       appBar: AppBar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
 
@@ -93,6 +96,5 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 }
-
 
 

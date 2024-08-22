@@ -1,11 +1,12 @@
+
 import 'dart:io';
 
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:fetin_2024_3/Features/ListOfReponders/select_responder.dart';
-import 'package:fetin_2024_3/Features/User/Screens/LivesStreaming/live_stream.dart';
+import '../ListOfResponders/select_responder.dart';
+import '../User/Screens/LiveStreaming/live_stream.dart';
 
 class EmergenciesScreen extends StatefulWidget {
   const EmergenciesScreen({Key? key}) : super(key: key);
@@ -24,7 +25,7 @@ class _EmergenciesScreenState extends State<EmergenciesScreen> {
       
       extendBodyBehindAppBar: false,
       appBar: AppBar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
         shape: const RoundedRectangleBorder(
@@ -122,7 +123,7 @@ class _EmergenciesScreenState extends State<EmergenciesScreen> {
                               userAddress: address,
                               userID: userId));
                         },
-                        tileColor: Colors.lightGreenAccent,
+                        tileColor: Colors.lightBlueAccent,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
@@ -179,6 +180,8 @@ class _EmergenciesScreenState extends State<EmergenciesScreen> {
                               onPressed: () {
                                 Get.to(
                                   () => LiveStreamingPage(
+                                    liveId: list[index]['videoId'],
+                                    isHost: false,
                                   ),
                                 );
                               },
@@ -197,9 +200,4 @@ class _EmergenciesScreenState extends State<EmergenciesScreen> {
       ),
     );
   }
-}
-
-class LiveStreamingPage {
-  //liveId: list['userID'],
-  //isHost: false,
 }

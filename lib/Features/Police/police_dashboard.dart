@@ -4,13 +4,13 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
-import 'package:fetin_2024_3/Features/User/Screens/LivesStreaming/sos_page.dart';
+import 'package:fetin_2024_3/Features/User/Screens/LiveStreaming/sos_page.dart';
 import 'package:fetin_2024_3/Features/User/Screens/Profile/profile_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sliding_switch/sliding_switch.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:fetin_2024_3/Features/User/Controllers/message_sending.dart';
-import 'package:fetin_2024_3/Features/User/Screens/LivesStreaming/live_stream.dart';
+import '../User/Controllers/message_sending.dart';
+import '../User/Screens/LiveStreaming/live_stream.dart';
 import 'dart:math';
 
 class PoliceDashboard extends StatefulWidget {
@@ -70,7 +70,7 @@ class _PoliceDashboardState extends State<PoliceDashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton:FloatingActionButton(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         foregroundColor: Colors.white,
         shape: StadiumBorder(
             side: BorderSide(
@@ -84,7 +84,7 @@ class _PoliceDashboardState extends State<PoliceDashboard> {
 
       extendBodyBehindAppBar: false,
       appBar: AppBar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
         shape: const RoundedRectangleBorder(
@@ -224,7 +224,7 @@ class _PoliceDashboardState extends State<PoliceDashboard> {
                           }
                         }
                       },
-                      tileColor: Colors.lightGreenAccent,
+                      tileColor: Colors.lightBlueAccent,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
                       ),
@@ -266,7 +266,10 @@ class _PoliceDashboardState extends State<PoliceDashboard> {
                               return;
                             } else {
                               Get.to(
-                                () => LiveStreamingPage( ),
+                                () => LiveStreamingPage(
+                                  liveId: list['userID'],
+                                  isHost: false,
+                                ),
                               );
                             }
                           })),
@@ -364,9 +367,4 @@ class _PoliceDashboardState extends State<PoliceDashboard> {
       print(e);
     }
   }
-}
-
-class LiveStreamingPage {
-  //liveId: list['userID'],
-  //isHost: false,
 }

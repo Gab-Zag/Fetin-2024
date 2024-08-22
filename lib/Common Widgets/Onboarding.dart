@@ -1,4 +1,3 @@
-
 import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -8,7 +7,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../Features/Login/login_screen.dart';
 import '../Features/User/Controllers/session_controller.dart';
-import '../Features/User/Screens/SignUp/verify_email.page.dart';
+import '../Features/User/Screens/SignUp/verify_email_page.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);

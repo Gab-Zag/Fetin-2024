@@ -39,7 +39,7 @@ class _ContactListScreenState extends State<ContactListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
         shape: const RoundedRectangleBorder(
@@ -100,7 +100,7 @@ class _ContactListScreenState extends State<ContactListScreen> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
-            tileColor: Colors.green.shade200,
+            tileColor: Colors.blueGrey.shade200,
             style: ListTileStyle.drawer,
             title: const Text('Contact 2'),
             subtitle: Text(_contact2 ?? ''),
@@ -122,7 +122,7 @@ class _ContactListScreenState extends State<ContactListScreen> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
-            tileColor: Colors.green.shade200,
+            tileColor: Colors.blueGrey.shade200,
             style: ListTileStyle.drawer,
             title: const Text('Contact 4'),
             subtitle: Text(_contact4?? ''),

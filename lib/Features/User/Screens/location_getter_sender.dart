@@ -24,7 +24,7 @@ class _LocationPageState extends State<LocationPage> {
     if (!serviceEnabled) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text(
-              'Serviço de Localização desativado. Por favor, ative o serviço.')));
+              'Location services are disabled. Please enable the services')));
       return false;
     }
     permission = await Geolocator.checkPermission();
@@ -32,14 +32,14 @@ class _LocationPageState extends State<LocationPage> {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
         ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Permissão de localização negada.')));
+            const SnackBar(content: Text('Location permissions are denied')));
         return false;
       }
     }
     if (permission == LocationPermission.deniedForever) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text(
-              'Permissão de localização permanentemente negada. Não podemos requisitar permissões.')));
+              'Location permissions are permanently denied, we cannot request permissions.')));
       return false;
     }
     return true;
@@ -87,10 +87,10 @@ class _LocationPageState extends State<LocationPage> {
               const SizedBox(height: 32),
               ElevatedButton(
                 onPressed: () {
-                  _messageController.sendLocationViaSMS("Emergencia Medica");
+                  _messageController.sendLocationViaSMS("Medical Emergency");
                   // _getCurrentPosition();
                 },
-                child: const Text("Mensagem de socorro enviada com localização"),
+                child: const Text("Sent Distress Message With Location"),
               )
             ],
           ),

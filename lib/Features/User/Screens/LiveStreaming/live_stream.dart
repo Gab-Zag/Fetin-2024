@@ -3,18 +3,18 @@ import 'package:zego_uikit_prebuilt_live_streaming/zego_uikit_prebuilt_live_stre
 
 import 'keys.dart';
 
-class LiveStreamPage extends StatelessWidget {
+class LiveStreamingPage extends StatelessWidget {
   final String liveId;
   final bool isHost;
-  
-  const LiveStreamPage(
-    {Key? key,required this.isHost, required this.liveId})
-    : super(key: key);
-    @override
 
-    Widget build(BuildContext context){
-      return SafeArea(
-        child: ZegoUIKitPrebuiltLiveStreaming(
+  const LiveStreamingPage(
+      {Key? key, required this.isHost, required this.liveId})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: ZegoUIKitPrebuiltLiveStreaming(
         appID: Keys().appId,
         appSign: Keys().appSign,
         userID: Keys().userId,

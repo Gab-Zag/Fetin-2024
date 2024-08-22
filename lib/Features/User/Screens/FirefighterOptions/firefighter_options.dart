@@ -1,13 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:fetin_2024_3/Features/User/Controllers/message_sending.dart';
+import '../../Controllers/message_sending.dart';
 
 class FireFighterOptions extends StatelessWidget {
   const FireFighterOptions({Key? key}) : super(key: key);
@@ -17,7 +16,7 @@ class FireFighterOptions extends StatelessWidget {
     final smsController = Get.put(messageController());
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
         shape: const RoundedRectangleBorder(
@@ -46,7 +45,7 @@ class FireFighterOptions extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text(
-                          "Opções Bombeiros",
+                          "Fire Fighter Options",
                           style: TextStyle(
                               fontSize: 28,
                               fontWeight: FontWeight.w700,
@@ -112,7 +111,7 @@ class FireFighterOptions extends StatelessWidget {
                       Radius.circular(15.0),
                     ),
                   ),
-                  tileColor: Colors.green.shade600,
+                  tileColor: Colors.blue.shade600,
                   leading: const Icon(Icons.call),
                   title: const Text('Call'),
                   subtitle:
@@ -148,9 +147,9 @@ class FireFighterOptions extends StatelessWidget {
                   // if (result == SmsStatus.sent) {
                   //   print("Sent");
                   // } else {
-                  //   print("Failed");s
+                  //   print("Failed");
                   // }
-                  smsController.sendLocationViaSMS("Emergencia de incedio\nSend Help at");
+                  smsController.sendLocationViaSMS("Fire Emergency\nSend Help at");
                 },
               ),
             ),

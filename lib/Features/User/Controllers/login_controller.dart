@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:fetin_2024_3/Features/User/Controllers/session_controller.dart';
 
-import '../Screens/SignUp/verify_email.page.dart';
+import '../Screens/SignUp/verify_email_page.dart';
 
 class LoginController extends GetxController {
   static LoginController get instance => Get.find();

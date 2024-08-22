@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:fetin_2024_3/Features/User/Screens/Profile/profile_screen.dart';
-import 'package:fetin_2024_3/Features/User/Screens/Bottom_nav.dart';
+import 'package:fetin_2024_3/Features/User/Screens/bottom_nav.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'emergency_contacts_controller.dart';
@@ -60,7 +60,7 @@ class _add_contactState extends State<add_contact> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
         shape: const RoundedRectangleBorder(
@@ -82,7 +82,7 @@ class _add_contactState extends State<add_contact> {
                           size: Size(56, 56),
                           child: ClipOval(
                             child: Material(
-                              color: Colors.lightGreenAccent,
+                              color: Colors.lightBlueAccent,
                               child: InkWell(
                                 splashColor: Colors.white,
                                 onTap: () {  Get.to(() => NavBar());
@@ -135,7 +135,7 @@ class _add_contactState extends State<add_contact> {
                 "Add Emergency Contacts here",
                 style: TextStyle(
                     fontSize: 20,
-                    color: Colors.green,
+                    color: Colors.blue,
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(

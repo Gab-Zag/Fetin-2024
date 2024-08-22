@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:fetin_2024_3/Features/User/Controllers/session_controller.dart';
 
-import 'package:fetin_2024_3/Features/User/Screens/SignUp/verify_email.page.dart';
+import '../Screens/SignUp/verify_email_page.dart';
+
+// SignUpController is used to store user data will he signup and alse create User Email And Password Authentication for login
 
 class SignUpController extends GetxController {
   static SignUpController get instance => Get.find();

@@ -1,13 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:fetin_2024_3/Features/User/Controllers/message_sending.dart';
+import '../../Controllers/message_sending.dart';
 
 class HospitalOptions extends StatelessWidget {
   const HospitalOptions({Key? key}) : super(key: key);
@@ -17,7 +16,7 @@ class HospitalOptions extends StatelessWidget {
     final smsController = Get.put(messageController());
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
         shape: const RoundedRectangleBorder(
@@ -46,7 +45,7 @@ class HospitalOptions extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text(
-                          "Opções Hospitalares",
+                          "Hospital Options",
                           style: TextStyle(
                               fontSize: 28,
                               fontWeight: FontWeight.w700,
@@ -71,7 +70,7 @@ class HospitalOptions extends StatelessWidget {
                     Radius.circular(15.0),
                   ),
                 ),
-                tileColor: Colors.green.shade300,
+                tileColor: Colors.blue.shade300,
                 leading: const Icon(Icons.map),
                 title: const Text('Hospital Map Display'),
                 subtitle: const Text('Find the nearest Hospital on the map'),
@@ -112,18 +111,18 @@ class HospitalOptions extends StatelessWidget {
                     Radius.circular(15.0),
                   ),
                 ),
-                tileColor: Colors.green.shade600,
+                tileColor: Colors.blue.shade600,
                 leading: const Icon(Icons.call),
                 title: const Text('Call'),
                 subtitle: const Text('Directly call the hospital helpline'),
                 onTap: () async {
                   if (await Permission.phone.request().isGranted) {
                     debugPrint("In making phone call");
-                    var url = Uri.parse("tel:192");
+                    var url = Uri.parse("tel:1122");
                     await launchUrl(url);
-                    debugPrint("Permitido a localização");
+                    debugPrint("Location Permission is granted");
                   } else {
-                    debugPrint("localização negada.");
+                    debugPrint("Location Permission is denied.");
                   }
                 },
               ),

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:fetin_2024_3/Features/Response Screen/emergencies_Screen.dart';
-
-import 'package:fetin_2024_3/Features/User/Controllers/login_Controller.dart';
-import 'package:fetin_2024_3/Features/User/Screens/Forget Password/forget_password.dart';
+import 'package:fetin_2024_3/Features/Response Screen/emergencies_screen.dart';
+import '../User/Controllers/login_controller.dart';
+import '../User/Screens/Forget Password/forget_password.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -101,7 +100,7 @@ class _LoginFormState extends State<LoginForm> {
                   },
                   child: const Text(
                     "Forget Password?",
-                    style: TextStyle(color: Colors.lightGreenAccent),
+                    style: TextStyle(color: Colors.lightBlueAccent),
                   )),
             ),
             SizedBox(
@@ -110,7 +109,7 @@ class _LoginFormState extends State<LoginForm> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.lightGreenAccent,
+                    backgroundColor: Colors.lightBlueAccent,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20))),
                 onPressed: () async {
@@ -134,7 +133,7 @@ class _LoginFormState extends State<LoginForm> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.lightGreenAccent,
+                    backgroundColor: Colors.lightBlueAccent,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20))),
                 onPressed: () async {
@@ -150,7 +149,6 @@ class _LoginFormState extends State<LoginForm> {
     );
   }
 }
-
 
 
 

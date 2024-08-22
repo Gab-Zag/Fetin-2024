@@ -3,8 +3,8 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:fetin_2024_3/Features/Emergency Contacts/add_contacts.dart';
-import 'package:fetin_2024_3/Features/User/Controllers/session_controller.dart';
+import '../../../Emergency Contacts/add_contacts.dart';
+import '../../Controllers/session_controller.dart';
 
 class ProfileFormWidget extends StatefulWidget {
   const ProfileFormWidget({
@@ -46,7 +46,7 @@ class _ProfileFormWidgetState extends State<ProfileFormWidget> {
                     const Text(
                       "User Info",
                       style: TextStyle(
-                        color: Colors.lightGreenAccent,
+                        color: Colors.lightBlueAccent,
                         fontSize: 20,
                       ),
                     ),
@@ -126,7 +126,7 @@ class _ProfileFormWidgetState extends State<ProfileFormWidget> {
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.white,
-                            backgroundColor: Colors.lightGreenAccent,
+                            backgroundColor: Colors.lightBlueAccent,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20))),
                         onPressed: () {
@@ -162,7 +162,7 @@ class _ProfileFormWidgetState extends State<ProfileFormWidget> {
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.white,
-                            backgroundColor: Colors.lightGreenAccent,
+                            backgroundColor: Colors.lightBlueAccent,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20))),
                         onPressed: () {
