@@ -90,7 +90,7 @@ class _ForgetFormWidgetState extends State<ForgetFormWidget> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.lightBlueAccent,
+                    backgroundColor: Colors.lightGreen,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20))),
                 onPressed: () {
@@ -104,7 +104,7 @@ class _ForgetFormWidgetState extends State<ForgetFormWidget> {
                     });
                   }
                 },
-                child: Text("Recover".toUpperCase()),
+                child: Text("Recuperar".toUpperCase()),
               ),
             )
           ],

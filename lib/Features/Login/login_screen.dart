@@ -14,18 +14,18 @@ class LoginScreen extends StatelessWidget  {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.lightGreen,
         centerTitle: true,
         automaticallyImplyLeading: false,
 
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
-            bottom: Radius.circular(40),
+            bottom: Radius.circular(60),
           ),
         ),
 
         bottom: PreferredSize(
-            preferredSize:  Size.fromHeight(Get.height * 0.1),
+            preferredSize:  Size.fromHeight(Get.height * 0.15),
             child: Container(
               padding: const EdgeInsets.only(bottom: 10),
               child: Column(
@@ -65,7 +65,7 @@ class LoginScreen extends StatelessWidget  {
             children: const [
               // (,
               LoginForm(),
-              FooterWidget(Texts: "Don't have an account ",Title: "Sign Up"),
+              FooterWidget(Texts: "Não tenho uma conta ",Title: "Inscrever-se"),
             ],
           ),
         ),

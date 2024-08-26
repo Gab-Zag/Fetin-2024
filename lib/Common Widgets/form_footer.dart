@@ -39,7 +39,7 @@ class FooterWidget extends StatelessWidget {
                   children: [
                     TextSpan(
                         text: Title,
-                        style: const TextStyle(color: Colors.lightBlueAccent))
+                        style: const TextStyle(color: Colors.lightGreen))
                   ]),
             ),
           ),

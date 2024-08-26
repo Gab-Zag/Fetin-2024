@@ -57,6 +57,7 @@ class DefaultFirebaseOptions {
     authDomain: 'flutteremergency.firebaseapp.com',
     storageBucket: 'flutteremergency.appspot.com',
     measurementId: 'G-DQW99JW51L',
+    databaseURL: 'https://fetin-2024-3-default-rtdb.firebaseio.com/'
   );
 
   static const FirebaseOptions android = FirebaseOptions(
@@ -65,5 +66,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '856218726716',
     projectId: 'fetin-2024-3',
     storageBucket: 'flutteremergency.appspot.com',
+    databaseURL: 'https://fetin-2024-3-default-rtdb.firebaseio.com/'
   );
 }

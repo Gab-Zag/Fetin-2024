@@ -17,7 +17,7 @@ class SignUpController extends GetxController {
   final fullName = TextEditingController();
   final phoneNo = TextEditingController();
 
-  DatabaseReference ref = FirebaseDatabase.instance.ref('Users');
+  DatabaseReference ref = FirebaseDatabase.instance.ref('Usuário');
 
   // final userRepo = Get.put(UserRepository());
 
@@ -35,29 +35,29 @@ class SignUpController extends GetxController {
         ref.child(value.user!.uid.toString()).set({
           'email': value.user!.email.toString(),
           // 'password': password,
-          'UserName': username,
-          'Phone': Phone,
-          'UserType': Usertype,
+          'Nome de Usuário': username,
+          'Telefone': Phone,
+          'Tipo de usuário': Usertype,
 
         });
 
         Get.offAll(() => const VerifyEmailPage());
-        Get.snackbar("Success", "Sign Up Successfully");
+        Get.snackbar("Sucesso", "Inscrito com sucesso");
       }).onError((error, stackTrace) {
-        if (error.toString().contains("email-already-in-use")) {
-          Get.snackbar("Error", "Email Already In Use");
-        } else if (error.toString().contains("weak-password")) {
-          Get.snackbar("Error", "Password Should Be At Least 6 Characters");
-        } else if (error.toString().contains("invalid-email")) {
-          Get.snackbar("Error", "Invalid Email");
-        } else if (error.toString().contains("network-request-failed")) {
-          Get.snackbar("Error", "Check Your Internet Connection");
+        if (error.toString().contains("e-mail já em uso")) {
+          Get.snackbar("Erro", "E-mail já em uso");
+        } else if (error.toString().contains("Senha Fraca")) {
+          Get.snackbar("Erro", "A senha deve ter pelo menos 6 caracteres");
+        } else if (error.toString().contains("email inválido")) {
+          Get.snackbar("Erro", "Email Inválido");
+        } else if (error.toString().contains("falha na solicitação de rede")) {
+          Get.snackbar("Erro", "Verifique sua conexão com a Internet");
         } else {
-          Get.snackbar("Error", error.toString());
+          Get.snackbar("Erro", error.toString());
         }
       });
     } catch (error) {
-      Get.snackbar("Error", error.toString());
+      Get.snackbar("Erro", error.toString());
       debugPrint(error.toString());
     }
   }

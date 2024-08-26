@@ -12,7 +12,7 @@ class ForgetPassword extends StatelessWidget {
     return Scaffold(
       // extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.lightGreen,
         centerTitle: true,
         automaticallyImplyLeading: false,
         shape: const RoundedRectangleBorder(
@@ -34,7 +34,7 @@ class ForgetPassword extends StatelessWidget {
                           size: Size(36, 36),
                           child: ClipOval(
                             child: Material(
-                              color: Colors.lightBlueAccent,
+                              color: Colors.lightGreen,
                               child: InkWell(
                                 splashColor: Colors.white,
                                 onTap: () {  Get.back();
@@ -89,7 +89,7 @@ class ForgetPassword extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Forget Password",
+                              "Esqueceu a Senha",
                               style: TextStyle(
                                   fontSize: 28,
                                   fontWeight: FontWeight.w700,
@@ -114,7 +114,7 @@ class ForgetPassword extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               ForgetFormWidget(),
-              FooterWidget(Texts: "Don't Have Account ", Title: "Sign Up"),
+              FooterWidget(Texts: "Não tenho conta ", Title: "Inscrever-se"),
             ],
           ),
         ),

@@ -35,7 +35,7 @@ class _LoginFormState extends State<LoginForm> {
                     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                     .hasMatch(value!);
                 if (!_isEmailValid) {
-                  return 'Invalid email.';
+                  return 'E-mail inválido.';
                 }
                 // Return null if the entered username is valid
                 return null;
@@ -54,10 +54,10 @@ class _LoginFormState extends State<LoginForm> {
               controller: controller.passwordController,
               validator: (value) {
                 if (value == null || value.trim().isEmpty) {
-                  return 'This field is required';
+                  return 'Este campo é obrigatório';
                 }
                 if (value.trim().length < 6) {
-                  return 'Password must be valid';
+                  return 'A senha deve ser válida';
                 }
                 // Return null if the entered username is valid
                 return null;
@@ -80,8 +80,8 @@ class _LoginFormState extends State<LoginForm> {
 
 
                 prefixIcon: const Icon(Icons.fingerprint),
-                labelText: "Password",
-                hintText: "Password",
+                labelText: "Senha",
+                hintText: "Senha",
                 border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
               ),
@@ -99,8 +99,8 @@ class _LoginFormState extends State<LoginForm> {
                     Get.to(() => const ForgetPassword());
                   },
                   child: const Text(
-                    "Forget Password?",
-                    style: TextStyle(color: Colors.lightBlueAccent),
+                    "Esqueceu a senha?",
+                    style: TextStyle(color: Colors.lightGreen),
                   )),
             ),
             SizedBox(
@@ -109,7 +109,7 @@ class _LoginFormState extends State<LoginForm> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.lightBlueAccent,
+                    backgroundColor: Colors.lightGreen,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20))),
                 onPressed: () async {
@@ -123,7 +123,7 @@ class _LoginFormState extends State<LoginForm> {
 
 
                 },
-                child: Text("Log in".toUpperCase()),
+                child: Text("Entrar".toUpperCase()),
               ),
             ),
             SizedBox(height: 10,),
@@ -133,13 +133,13 @@ class _LoginFormState extends State<LoginForm> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.lightBlueAccent,
+                    backgroundColor: Colors.lightGreen,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20))),
                 onPressed: () async {
                 Get.to(const EmergenciesScreen());
                 },
-                child: Text("ADMIN SCREEN".toUpperCase()),
+                child: Text("TELA DE ADMINISTRAÇÃO".toUpperCase()),
               ),
             )
 

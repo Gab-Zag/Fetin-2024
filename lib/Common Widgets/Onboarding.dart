@@ -84,15 +84,15 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           buildPage(
               color: Colors.white,
               url: "assets/Ambulance.png",
-              title: 'Emergency Patrol',
+              title: 'Serviços de Emergência',
               subtitle:
-                  'Our app provides a platform for quick response services from police, ambulance, and firefighters.'),
+                  'Nosso aplicativo fornece uma plataforma para serviços de resposta rápida de policiais, ambulâncias e bombeiros.'),
           buildPage(
               color: Colors.white,
               url: 'assets/Quick.png',
-              title: 'Easy and Fast Response',
+              title: 'Resposta Fácil e Rápida',
               subtitle:
-                  'Our app allows you to quickly send out an emergency request with just a few taps, and our responders will be alerted to your location within seconds.'),
+                  'Nosso aplicativo permite que você envie rapidamente uma solicitação de emergência com apenas alguns toques.'),
           buildPage(
               color: Colors.white,
               url: 'assets/Choose.png',
@@ -123,11 +123,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     height: Get.height * .09,
                     width: Get.width * .65,
                     decoration: const BoxDecoration(
-                      color: Colors.lightBlueAccent,
+                      color: Colors.lightGreen,
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                     child: const Center(
-                        child: Text('Get Started',
+                        child: Text('Comece',
                             style:
                                 TextStyle(fontSize: 20, color: Colors.white)))),
               ),
@@ -161,7 +161,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       child: const Text(
                         'Skip',
                         style: TextStyle(
-                            fontSize: 25, color: Colors.lightBlueAccent),
+                            fontSize: 25, color: Colors.green),
                       )),
                 ),
                 Padding(
@@ -188,7 +188,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           duration: const Duration(milliseconds: 500),
                           curve: Curves.easeInOut);
                     },
-                    backgroundColor: Colors.lightBlueAccent,
+                    backgroundColor: Colors.lightGreen,
                     child: const Center(
                       child: Text(
                         '>',
